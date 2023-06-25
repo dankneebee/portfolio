@@ -1,0 +1,327 @@
+<!--
+
+* File: index.html
+
+* Project: Portfolio Website
+
+* Author: Daniela Georgieva
+
+* Date: 18/04/23
+
+* -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== icon ===== -->
+        <link rel="icon" type="image/x-icon" href="assets/img/dan.png">
+
+        <!-- ===== css stylesheet ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ===== importing the box icons ===== -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Portfolio website</title>
+    </head>
+    <body>
+        <div class="custom-shape-divider-top-1681977284">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <!--===== header =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#about" class="nav__logo">Daniela</a>
+                </div>
+
+                <label for="checkbox" class="toggler">
+                    <input type="checkbox" id="checkbox" onclick="myFunction()">
+                    <span class="ball"></span>
+                    <i class="bx bx-sun sun"></i>
+                    <i class="bx bx-moon moon"></i>
+                </label>
+      
+             <script>
+                function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark");
+                }
+             </script>
+
+             <!-- ===== navigation ===== -->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#edu" class="nav__link">Education</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- ===== menu toggle button ===== -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div> 
+                
+              
+            </nav>
+        </header>
+
+        <!-- ===== body ===== -->
+        <main class="l-main">
+            <!-- ===== button that takes the user back to the top ===== -->
+            <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class='bx bxs-to-top'></i> </button>
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I am <span class="home__title-color">Daniela</span><br> &lt;Software Engineer&gt; </h1>
+
+                    <a href="assets/files/Resume.pdf" download="Resume" class="button">My Resume</a>
+                </div>
+
+                <!-- ===== linkedin and github icons ===== -->
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/daniela-k-georgieva/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+
+                    <a href="https://github.com/dankneebee" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <!-- ===== blob mask overlay (yes i like making my life more difficult) ===== -->
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 500 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="-90" y="5" href="assets/img/pro.png"/>
+                        </g>
+                    </svg>
+                </div>
+                
+            </section>
+
+            <!-- ===== about ===== -->
+            <section class="about section" id="about">
+                <h2 class="section-title"><i class='bx bxs-invader'></i> &nbsp; About &nbsp; <i class='bx bxs-invader'></i></h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">Hello, I am Daniela!</h2>
+                        <p class="about__text">A passionate software engineer trainee. Main technologies I work with are Java, HTML5, CSS, JS and GIT.  I believe my proficiency in Java gives me a strong foundation for building software applications, and my passion for web development technologies allows me to design engaging and visually appealing user interfaces. With further experience and training, I am confident that I can become a well-rounded software engineer capable of building robust and innovative, but also visually appealing software solutions.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!-- ===== education ===== -->
+            <section class="Education" id="edu">
+                <h2 class="section-title"><i class='bx bxs-graduation skills__icon'></i> &nbsp; Education &nbsp; <i class='bx bxs-graduation skills__icon'></i></h2>
+                
+                <div class="edu__container bd-grid">
+                    <div>
+                        <h2 class="edu__subtitle">Education?</h2>
+                     
+                        <p class="edu__text"> After graduating the German Language High School in Burgas, I moved on to something more technical. Now a Junior Computer Science and Psychology major at the American University in Bulgaria, I am eager to dive deeper into the world of technology.</p>           
+                    </div>    
+                    
+                    <div class="edu__img">
+                        <img src="assets/img/dan.png" alt="">
+                    </div>                               
+                </div>
+            </section>
+
+            <!-- ===== skills ===== -->
+            <section class="skills section" id="skills">
+                <h2 class="section-title"><i class='bx bx-laptop'></i> &nbsp; Skills &nbsp; <i class='bx bx-laptop'></i> </h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Profesional Skills</h2>
+                        <p class="skills__text">I'm an aspiring software engineer with a specialization in Java, and I have a keen interest in HTML, CSS, and JS.</p>
+                         
+                        <!-- ===== java ===== -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-java skills__icon'></i>
+                                <span class="skills__name">JAVA</span>
+                            </div>
+                            <div class="skills__bar skills__java">
+                             </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                       
+                        <!-- ===== html ===== -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+                            </div>
+                            <div>
+                                <span class="skills__percentage">90%</span>
+                            </div>
+                        </div>
+
+                        <!-- ===== css ===== -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css"> 
+                            </div>
+                            <div>
+                                <span class="skills__percentage">80%</span>
+                            </div>
+                        </div>
+
+                        <!-- ===== git ===== -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-git skills__icon'></i>
+                                <span class="skills__name">GIT</span>
+                            </div>
+                            <div class="skills__bar skills__git">
+                            </div>
+                            <div>
+                                <span class="skills__percentage">65%</span>
+                            </div>
+                        </div>
+
+                        <!-- ===== js ===== -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                            </div>
+                            <div>
+                                <span class="skills__percentage">60%</span>
+                            </div>
+                        </div>
+
+                        <!-- ===== cplusplus ===== -->
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-c-plus-plus skills__icon' ></i>
+                                <span class="skills__name">C++</span>
+                            </div>
+                            <div class="skills__bar skills__cpp">
+                            </div>
+                            <div>
+                                <span class="skills__percentage">50%</span>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    
+                    <div>      
+                        <figure>    
+                        <img src="assets/img/work3.png" alt="" class="skills__img">
+                        <figcaption><small>by Boyan Bozhinov @ TheHub</small></figcaption>
+                    </figure> 
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== work ===== -->
+            <section class="work section" id="work">
+                <h2 class="section-title"><i class='bx bx-briefcase-alt-2' ></i> &nbsp; Work &nbsp; <i class='bx bx-briefcase-alt-2' ></i> </h2>
+
+                <div class="work__container bd-grid">
+                    <a href="https://wellness-place.azurewebsites.net" class="work__img" target="_blank">
+                        <img src="assets/img/portfolio1.png" alt="">
+                    </a>
+                    <a href="https://github.com/dankneebee/sudoku-project" class="work__img" target="_blank">
+                        <img src="assets/img/portfolio2.png" alt="">
+                    </a>
+                    <a href="https://thehub-aubg.com" class="work__img" target="_blank">
+                        <img src="assets/img/portfolio3.png" alt="">
+                    </a>
+                </div>
+
+                <!-- ===== table ===== -->
+                <div class="table">
+                <table class="work__table" style="background-color: rgb(247, 240, 255); color:rgb(62, 0, 149); text-align: center; border: 1px solid #daadff;">
+                    <thead>
+                        <tr>
+                        <th>Project Name</th>
+                        <th>Time Created</th>
+                        <th>Deployed?</th>
+                   </tr> 
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td>R/Place Replica</td>
+                            <td>November 2022</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Sudoku Project</td>
+                            <td>Spring 2022</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>The Hub Website</td>
+                            <td>Fall 2022-Spring 2023</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+
+            <!-- ===== contact ===== -->
+             <section class="contact section" id="contact">
+                <h2 class="section-title"> <i class='bx bx-envelope' ></i> &nbsp; Contact &nbsp; <i class='bx bx-envelope' ></i> </h2>
+
+                <!-- ===== the form sends submissions through an endpoint in getform.io ===== -->
+                <div class="contact__container bd-grid">
+                    <form action="https://getform.io/f/6e8ce47d-3412-4f17-af20-69d73a195bd2" class="contact__form" method="post" >
+                        <input type="text" name="name" placeholder="Name" class="contact__input">
+                        <input type="mail" name="email" placeholder="Email" class="contact__input" required>
+                        <textarea type="text" name="textarea" id="text" cols="0" rows="10" class="contact__input" placeholder="Include your message"></textarea>
+                        <input type="submit" name="contact__button" value="Contact" class="contact__button button">
+                    </form>
+                </div>
+            </section> 
+            
+        </div>
+        </main>
+
+        <!-- ===== footer ===== -->
+        <footer class="footer">
+            <p class="footer__title"> <i class='bx bxs-star' ></i> &nbsp; Daniela &nbsp; <i class='bx bxs-star' ></i> </p>
+            <div class="footer__social">
+                <a href="https://www.facebook.com/andy.is.a.big.phan" class="footer__icon" target="_blank"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://github.com/dankneebee" class="footer__icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/daniela-k-georgieva/" class="footer__icon" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+            <p class="footer__copy">&#169; Daniela Georgieva. All rigths reserved</p>
+        </footer>
+
+        <!-- ===== scroll reveal animation ===== -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- ===== js file ===== -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
